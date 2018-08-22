@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>java反射 | 刘梦雨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="java反射Java反射机制是在运行状态中，对于任何一个类，都能够知道这个类的所有方法和属性；对于任何一个对象，都能调用他的任何一个方法和属性；这种动态获取信息和动态调用对象的方法的功能成为Java的反射机制  Class c1 = Code.class Class c2 = code1.getClass() Class c3 = Class.forName(“类的路径”)   获取成员方法met">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java反射">
+<meta property="og:url" content="http://yoursite.com/2018/08/21/java反射/index.html">
+<meta property="og:site_name" content="刘梦雨">
+<meta property="og:description" content="java反射Java反射机制是在运行状态中，对于任何一个类，都能够知道这个类的所有方法和属性；对于任何一个对象，都能调用他的任何一个方法和属性；这种动态获取信息和动态调用对象的方法的功能成为Java的反射机制  Class c1 = Code.class Class c2 = code1.getClass() Class c3 = Class.forName(“类的路径”)   获取成员方法met">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-21T10:14:24.593Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java反射">
+<meta name="twitter:description" content="java反射Java反射机制是在运行状态中，对于任何一个类，都能够知道这个类的所有方法和属性；对于任何一个对象，都能调用他的任何一个方法和属性；这种动态获取信息和动态调用对象的方法的功能成为Java的反射机制  Class c1 = Code.class Class c2 = code1.getClass() Class c3 = Class.forName(“类的路径”)   获取成员方法met">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/scrollUp/image.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <div class="logo">
+        <img src="/logo.png" alt="Profile Picture">
+      </div>
+      <div id="title">刘梦雨</div>
+      
+       <ul class="my-socials">
+  
+ 
+</ul>
+    </div>
+  </div>
+  <div id="header-inner" class="">
+    <nav id="main-nav">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <!--
+        
+          
+            <a class="main-nav-link" href="/">首页</a>
+          
+            <a class="main-nav-link" href="/categories/life">生活</a>
+          
+            <a class="main-nav-link" href="/archives">文章</a>
+          
+        
+      -->
+    </nav>
+    <nav id="title-nav" style="display:none">
+      <a href="/">刘梦雨</a>
+      <img src="/logo.png" alt="Profile Picture">
+      <!--
+      <span id="title-nav-socials">
+        
+       
+     </span>
+      -->
+    </nav>
+    <nav id="sub-nav">
+      
+      <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+        <input type="submit" value="" class="search-form-submit">
+        <input name=tn type=hidden value="bds">
+        <input name=cl type=hidden value="3">
+        <input name=ct type=hidden value="2097152">
+        <input type="hidden" name="si" value="yoursite.com">
+      </form>
+    </div>
+  </div>
+  <div class="site-nav" style="display: none;">
+    <ul>
+      
+      
+        <li><a href="/">首页</a></li>
+      
+        <li><a href="/categories/life">生活</a></li>
+      
+        <li><a href="/archives">文章</a></li>
+      
+      
+    </ul>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-java反射" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/21/java反射/" class="article-date">
+  <time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      java反射
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="java反射"><a href="#java反射" class="headerlink" title="java反射"></a>java反射</h1><p>Java反射机制是在运行状态中，对于任何一个类，都能够知道这个类的所有方法和属性；对于任何一个对象，都能调用他的任何一个方法和属性；这种动态获取信息和动态调用对象的方法的功能成为Java的反射机制</p>
+<ul>
+<li>Class c1 = Code.class</li>
+<li>Class c2 = code1.getClass()</li>
+<li>Class c3 = Class.forName(“类的路径”)</li>
+</ul>
+<ul>
+<li>获取成员方法method</li>
+<li>获取成员变量field</li>
+<li>获取构造函数 Constructor</li>
+</ul>
+<h2 id="获取成员方法信息"><a href="#获取成员方法信息" class="headerlink" title="获取成员方法信息"></a>获取成员方法信息</h2><ul>
+<li>getDeclaredMethod（String name,） 获得该类的所有的方法，不包括父类的</li>
+<li>getMethod 获得该类所有的public方法，包括父类的<h2 id="获取成员变量信息"><a href="#获取成员变量信息" class="headerlink" title="获取成员变量信息"></a>获取成员变量信息</h2></li>
+<li>getDeclareField(String name) 获得该类自身声明的所有变量，不包括父类的</li>
+<li>getField(String name) 获取该类所有的public成员变量，包括父类的</li>
+<li>field.setAccessible(true)//设置允许访问，因为成员变量为private的，所以要手动设置允许访问</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://yoursite.com/2018/08/21/java反射/" data-id="cjl3jzylv00029a90ixdkj4cv" class="article-share-link">Share</a>
+      
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/21/框架/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MVC,MVP架构简介
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/21/kotlin基础知识/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">kotlin 基础知识</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 刘梦雨<br>
+      Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!--
+      <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories/life" class="mobile-nav-link">生活</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+</nav>
+    -->
+    
+
+<!-- 百度分享 start -->
+
+<!-- 百度分享 end -->
+
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<script src="/js/jquery.scrollUp.min.js"></script>
+<script src="/js/jquery.transform.js"></script>
+<script src="/js/menu.js"></script>
+
+<script src="/js/script.js"></script>
+<script src="/js/scrollUp.js"></script>
+
+  </div>
+</body>
+</html>

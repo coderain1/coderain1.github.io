@@ -1,304 +1,254 @@
-
-
 <!DOCTYPE html>
-<html lang="">
-<head prefix="og: http://ogp.me/ns#">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <title>ConstraintLayout | Hexo</title>
-
-    <!-- Open Graph -->
-    <meta name="description" content="ConstraintLayout &amp;#x76F8;&amp;#x5173;&amp;#x7F51;&amp;#x5740;&amp;#xFF1A;https://www.jianshu.com/p/50debc330e91&amp;#x548C;Relativelayout&amp;#x4E00;&amp;#x6837;&amp;#x90FD;&amp;#x662F;&amp;#x4E3A;&amp;#x4E86;&amp;#x51CF;&amp;#x5C11;&amp;#x591A;&amp;#x5C42;&amp;#x">
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ConstraintLayout | 刘梦雨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ConstraintLayout 相关网址：https://www.jianshu.com/p/50debc330e91和Relativelayout一样都是为了减少多层嵌套布局，为约束布局  三种约束 子控件和子控件之间的约束 子控件和父控件之间的约束 子控件和guideline之间的约束  相对定位（Relative positioning）layout_constraintXXX_toYYY">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ConstraintLayout">
 <meta property="og:url" content="http://yoursite.com/2018/07/24/ConstraintLayout/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ConstraintLayout &amp;#x76F8;&amp;#x5173;&amp;#x7F51;&amp;#x5740;&amp;#xFF1A;https://www.jianshu.com/p/50debc330e91&amp;#x548C;Relativelayout&amp;#x4E00;&amp;#x6837;&amp;#x90FD;&amp;#x662F;&amp;#x4E3A;&amp;#x4E86;&amp;#x51CF;&amp;#x5C11;&amp;#x591A;&amp;#x5C42;&amp;#x">
+<meta property="og:site_name" content="刘梦雨">
+<meta property="og:description" content="ConstraintLayout 相关网址：https://www.jianshu.com/p/50debc330e91和Relativelayout一样都是为了减少多层嵌套布局，为约束布局  三种约束 子控件和子控件之间的约束 子控件和父控件之间的约束 子控件和guideline之间的约束  相对定位（Relative positioning）layout_constraintXXX_toYYY">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2018-08-20T23:54:18.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ConstraintLayout">
-<meta name="twitter:description" content="ConstraintLayout &amp;#x76F8;&amp;#x5173;&amp;#x7F51;&amp;#x5740;&amp;#xFF1A;https://www.jianshu.com/p/50debc330e91&amp;#x548C;Relativelayout&amp;#x4E00;&amp;#x6837;&amp;#x90FD;&amp;#x662F;&amp;#x4E3A;&amp;#x4E86;&amp;#x51CF;&amp;#x5C11;&amp;#x591A;&amp;#x5C42;&amp;#x">
-
-    <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "email": "mailto:",
-  "image": "",
-  "name": "John Doe",
-  "url": "http://yoursite.com"
-}
-</script>
-    <script>
-    var algoliaEnabled = false;
-    
-</script>
-
-    
-
-    
-    
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-    
-    
-    
-        <!-- stylesheets list from config.yml -->
-        
-        <link rel="stylesheet" href="/css/aloha.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
-        
-        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
-        
-    
-
+<meta name="twitter:description" content="ConstraintLayout 相关网址：https://www.jianshu.com/p/50debc330e91和Relativelayout一样都是为了减少多层嵌套布局，为约束布局  三种约束 子控件和子控件之间的约束 子控件和父控件之间的约束 子控件和guideline之间的约束  相对定位（Relative positioning）layout_constraintXXX_toYYY">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/scrollUp/image.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
 </head>
-<body id="body" style="margin-bottom: 0;" class="pushable">
-
-    <div class="ui top fixed menu">
-        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
-    </div>
-
-    <div id="menu-sidebar" class="ui left vertical sidebar menu">
-
-    <div id="sidebar-top">
-        <div class="content">
-            <h3>Hexo</h3>
-        </div>
-    </div>
-    <div class="ui container sidebar-card">
-    <div class="ui people shape content">
-        <div class="active side">
-            <div class="ui card">
-                <div class="image">
-                    <img class="ui medium bordered image" src="/images/avatar.jpg">
-                </div>
-                <div class="content">
-                    <a class="header">John Doe</a>
-                    
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                        
-                    </div>
-
-                </div>
-                <div class="extra content">
-                    <div class="ui list">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</div>
-
-    
-    
-
-    
-
-    
-    <a href="/index.html" class="item" >
-        <i class="home icon"></i>
-        HOME
-    </a>
-
-    
-
-    
-</div>
-
-    <div class="pusher body-content">
-        <div id="content" class="ui main container">
-            <!--<div class="ui one column grid">-->
-                <!--<div class="column">-->
-                    <!--<div class="ui main container">-->
-                        <div id="post-ConstraintLayout" class="ui main container article-type-post">
-
-    
-
-    <div class="ui divided grid">
-
-        <div class="two column row" id="article-content">
-
-            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
-                
-
-<h1 class="ui header">
-    
-    ConstraintLayout
-</h1>
-
-
-
-                <div class="article-inner">
-
-                    <div class="article-entry" itemprop="articleBody">
-                        
-                        <h1 id="ConstraintLayout"><a href="#ConstraintLayout" class="headerlink" title="ConstraintLayout"></a>ConstraintLayout</h1><blockquote>
-<p>&#x76F8;&#x5173;&#x7F51;&#x5740;&#xFF1A;<a href="https://www.jianshu.com/p/50debc330e91" target="_blank" rel="noopener">https://www.jianshu.com/p/50debc330e91</a><br>&#x548C;Relativelayout&#x4E00;&#x6837;&#x90FD;&#x662F;&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x591A;&#x5C42;&#x5D4C;&#x5957;&#x5E03;&#x5C40;&#xFF0C;&#x4E3A;&#x7EA6;&#x675F;&#x5E03;&#x5C40;</p>
-</blockquote>
-<h2 id="&#x4E09;&#x79CD;&#x7EA6;&#x675F;"><a href="#&#x4E09;&#x79CD;&#x7EA6;&#x675F;" class="headerlink" title="&#x4E09;&#x79CD;&#x7EA6;&#x675F;"></a>&#x4E09;&#x79CD;&#x7EA6;&#x675F;</h2><ul class="ui list">
-<li>&#x5B50;&#x63A7;&#x4EF6;&#x548C;&#x5B50;&#x63A7;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x7EA6;&#x675F;</li>
-<li>&#x5B50;&#x63A7;&#x4EF6;&#x548C;&#x7236;&#x63A7;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x7EA6;&#x675F;</li>
-<li>&#x5B50;&#x63A7;&#x4EF6;&#x548C;guideline&#x4E4B;&#x95F4;&#x7684;&#x7EA6;&#x675F;</li>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <div class="logo">
+        <img src="/logo.png" alt="Profile Picture">
+      </div>
+      <div id="title">刘梦雨</div>
+      
+       <ul class="my-socials">
+  
+ 
 </ul>
-<h2 id="&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF08;Relative-positioning&#xFF09;"><a href="#&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF08;Relative-positioning&#xFF09;" class="headerlink" title="&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF08;Relative positioning&#xFF09;"></a>&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF08;Relative positioning&#xFF09;</h2><p>layout_constraintXXX_toYYYof</p>
-<p>XXX:&#x63A7;&#x4EF6;&#x672C;&#x8EAB;&#x7684;&#x8FB9;&#x754C;<br>YYY:&#x7EA6;&#x675F;&#x63A7;&#x4EF6;&#x7684;&#x8FB9;&#x754C;</p>
-<h2 id="&#x5F53;&#x7EA6;&#x675F;&#x63A7;&#x4EF6;&#x4E3A;GONE&#x65F6;&#x7684;margins"><a href="#&#x5F53;&#x7EA6;&#x675F;&#x63A7;&#x4EF6;&#x4E3A;GONE&#x65F6;&#x7684;margins" class="headerlink" title="&#x5F53;&#x7EA6;&#x675F;&#x63A7;&#x4EF6;&#x4E3A;GONE&#x65F6;&#x7684;margins"></a>&#x5F53;&#x7EA6;&#x675F;&#x63A7;&#x4EF6;&#x4E3A;GONE&#x65F6;&#x7684;margins</h2><p>layout_goneMarginXXX</p>
+    </div>
+  </div>
+  <div id="header-inner" class="">
+    <nav id="main-nav">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <!--
+        
+          
+            <a class="main-nav-link" href="/">首页</a>
+          
+            <a class="main-nav-link" href="/categories/life">生活</a>
+          
+            <a class="main-nav-link" href="/archives">文章</a>
+          
+        
+      -->
+    </nav>
+    <nav id="title-nav" style="display:none">
+      <a href="/">刘梦雨</a>
+      <img src="/logo.png" alt="Profile Picture">
+      <!--
+      <span id="title-nav-socials">
+        
+       
+     </span>
+      -->
+    </nav>
+    <nav id="sub-nav">
+      
+      <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+        <input type="submit" value="" class="search-form-submit">
+        <input name=tn type=hidden value="bds">
+        <input name=cl type=hidden value="3">
+        <input name=ct type=hidden value="2097152">
+        <input type="hidden" name="si" value="yoursite.com">
+      </form>
+    </div>
+  </div>
+  <div class="site-nav" style="display: none;">
+    <ul>
+      
+      
+        <li><a href="/">首页</a></li>
+      
+        <li><a href="/categories/life">生活</a></li>
+      
+        <li><a href="/archives">文章</a></li>
+      
+      
+    </ul>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ConstraintLayout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/24/ConstraintLayout/" class="article-date">
+  <time datetime="2018-07-23T23:06:19.000Z" itemprop="datePublished">2018-07-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ConstraintLayout
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ConstraintLayout"><a href="#ConstraintLayout" class="headerlink" title="ConstraintLayout"></a>ConstraintLayout</h1><blockquote>
+<p>相关网址：<a href="https://www.jianshu.com/p/50debc330e91" target="_blank" rel="noopener">https://www.jianshu.com/p/50debc330e91</a><br>和Relativelayout一样都是为了减少多层嵌套布局，为约束布局</p>
+</blockquote>
+<h2 id="三种约束"><a href="#三种约束" class="headerlink" title="三种约束"></a>三种约束</h2><ul>
+<li>子控件和子控件之间的约束</li>
+<li>子控件和父控件之间的约束</li>
+<li>子控件和guideline之间的约束</li>
+</ul>
+<h2 id="相对定位（Relative-positioning）"><a href="#相对定位（Relative-positioning）" class="headerlink" title="相对定位（Relative positioning）"></a>相对定位（Relative positioning）</h2><p>layout_constraintXXX_toYYYof</p>
+<p>XXX:控件本身的边界<br>YYY:约束控件的边界</p>
+<h2 id="当约束控件为GONE时的margins"><a href="#当约束控件为GONE时的margins" class="headerlink" title="当约束控件为GONE时的margins"></a>当约束控件为GONE时的margins</h2><p>layout_goneMarginXXX</p>
 <blockquote>
-<p>&#x5F53;&#x7EA6;&#x675F;&#x63A7;&#x4EF6;&#x4E3A;GONE&#x65F6;&#xFF0C;&#x63A7;&#x4EF6;&#x81EA;&#x8EAB;&#x7684;marginXXX&#x5931;&#x6548;&#xFF0C;goneMarginXXX&#x4F1A;&#x8986;&#x76D6;marginXXX</p>
+<p>当约束控件为GONE时，控件自身的marginXXX失效，goneMarginXXX会覆盖marginXXX</p>
 </blockquote>
-<h2 id="&#x5C45;&#x4E2D;&#x5B9A;&#x4F4D;"><a href="#&#x5C45;&#x4E2D;&#x5B9A;&#x4F4D;" class="headerlink" title="&#x5C45;&#x4E2D;&#x5B9A;&#x4F4D;"></a>&#x5C45;&#x4E2D;&#x5B9A;&#x4F4D;</h2><p>&#x5F53;&#x63A7;&#x4EF6;&#x7684;&#x7EA6;&#x675F;&#x4E3A; &#x201C;&#x4E0D;&#x53EF;&#x80FD;&#x201D;&#x7684;&#x7EA6;&#x675F;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;android.support.constraint.ConstraintLayout</span><br><span class="line">    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;Button</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:text=&quot;button&quot;</span><br><span class="line">        app:layout_constraintLeft_toLeftOf=&quot;parent&quot;</span><br><span class="line">        app:layout_constraintRight_toRightOf=&quot;parent&quot;/&gt;</span><br><span class="line"></span><br><span class="line">&lt;/android.support.constraint.ConstraintLayout&gt;</span><br></pre></td></tr></table></figure></p>
-<p>&#x6B64;&#x65F6;button&#x4F1A;&#x5C45;&#x4E2D;&#x5C55;&#x793A;</p>
-<h2 id="&#x503E;&#x5411;&#xFF08;bias&#xFF09;"><a href="#&#x503E;&#x5411;&#xFF08;bias&#xFF09;" class="headerlink" title="&#x503E;&#x5411;&#xFF08;bias&#xFF09;"></a>&#x503E;&#x5411;&#xFF08;bias&#xFF09;</h2><ul class="ui list">
-<li>layout_constraintHorizontal_bias (0&#x6700;&#x5DE6;&#x8FB9; 1&#x6700;&#x53F3;&#x8FB9;)</li>
-<li>layout_constraintVertical_bias (0&#x6700;&#x4E0A;&#x8FB9; 1 &#x6700;&#x5E95;&#x8FB9;)</li>
-<li>bias&#x652F;&#x6301;&#x5C0F;&#x6570;&#x5B9A;&#x4F4D;</li>
+<h2 id="居中定位"><a href="#居中定位" class="headerlink" title="居中定位"></a>居中定位</h2><p>当控件的约束为 “不可能”的约束<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;android.support.constraint.ConstraintLayout</span><br><span class="line">    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;Button</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:text=&quot;button&quot;</span><br><span class="line">        app:layout_constraintLeft_toLeftOf=&quot;parent&quot;</span><br><span class="line">        app:layout_constraintRight_toRightOf=&quot;parent&quot;/&gt;</span><br><span class="line"></span><br><span class="line">&lt;/android.support.constraint.ConstraintLayout&gt;</span><br></pre></td></tr></table></figure></p>
+<p>此时button会居中展示</p>
+<h2 id="倾向（bias）"><a href="#倾向（bias）" class="headerlink" title="倾向（bias）"></a>倾向（bias）</h2><ul>
+<li>layout_constraintHorizontal_bias (0最左边 1最右边)</li>
+<li>layout_constraintVertical_bias (0最上边 1 最底边)</li>
+<li>bias支持小数定位</li>
 </ul>
-<h2 id="&#x5C3A;&#x5BF8;&#x7EA6;&#x675F;&#xFF08;dimensions-constrains&#xFF09;"><a href="#&#x5C3A;&#x5BF8;&#x7EA6;&#x675F;&#xFF08;dimensions-constrains&#xFF09;" class="headerlink" title="&#x5C3A;&#x5BF8;&#x7EA6;&#x675F;&#xFF08;dimensions constrains&#xFF09;"></a>&#x5C3A;&#x5BF8;&#x7EA6;&#x675F;&#xFF08;dimensions constrains&#xFF09;</h2><p>&#x5F53;Constraintlayout&#x4E3A;wrap_content&#x65F6;&#xFF0C;</p>
-<ul class="ui list">
+<h2 id="尺寸约束（dimensions-constrains）"><a href="#尺寸约束（dimensions-constrains）" class="headerlink" title="尺寸约束（dimensions constrains）"></a>尺寸约束（dimensions constrains）</h2><p>当Constraintlayout为wrap_content时，</p>
+<ul>
 <li>minWidth</li>
 <li>minHeight</li>
 </ul>
-<h2 id="&#x63A7;&#x4EF6;&#x7684;&#x5C3A;&#x5BF8;&#x7EA6;&#x675F;&#xFF08;widgets-dimensions-constrains&#xFF09;"><a href="#&#x63A7;&#x4EF6;&#x7684;&#x5C3A;&#x5BF8;&#x7EA6;&#x675F;&#xFF08;widgets-dimensions-constrains&#xFF09;" class="headerlink" title="&#x63A7;&#x4EF6;&#x7684;&#x5C3A;&#x5BF8;&#x7EA6;&#x675F;&#xFF08;widgets dimensions constrains&#xFF09;"></a>&#x63A7;&#x4EF6;&#x7684;&#x5C3A;&#x5BF8;&#x7EA6;&#x675F;&#xFF08;widgets dimensions constrains&#xFF09;</h2><ul class="ui list">
-<li>&#x786E;&#x5B9A;&#x7684;&#x5C3A;&#x5BF8;</li>
+<h2 id="控件的尺寸约束（widgets-dimensions-constrains）"><a href="#控件的尺寸约束（widgets-dimensions-constrains）" class="headerlink" title="控件的尺寸约束（widgets dimensions constrains）"></a>控件的尺寸约束（widgets dimensions constrains）</h2><ul>
+<li>确定的尺寸</li>
 <li>wrap_content</li>
-<li>0dp &#x76F8;&#x5F53;&#x4E8E;match_constraint<br>match_parent&#x5728;Constraintlayout&#x4E2D;&#x4E0D;&#x518D;&#x88AB;&#x652F;&#x6301;</li>
+<li>0dp 相当于match_constraint<br>match_parent在Constraintlayout中不再被支持</li>
 </ul>
-<h2 id="&#x6BD4;&#x4F8B;&#xFF08;Ratio&#xFF09;"><a href="#&#x6BD4;&#x4F8B;&#xFF08;Ratio&#xFF09;" class="headerlink" title="&#x6BD4;&#x4F8B;&#xFF08;Ratio&#xFF09;"></a>&#x6BD4;&#x4F8B;&#xFF08;Ratio&#xFF09;</h2><h3 id="&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x7684;&#x7EA6;&#x675F;"><a href="#&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x7684;&#x7EA6;&#x675F;" class="headerlink" title="&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x7684;&#x7EA6;&#x675F;"></a>&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x7684;&#x7EA6;&#x675F;</h3><h4 id="&#x6BD4;&#x4F8B;&#x503C;&#x6709;&#x4E24;&#x79CD;"><a href="#&#x6BD4;&#x4F8B;&#x503C;&#x6709;&#x4E24;&#x79CD;" class="headerlink" title="&#x6BD4;&#x4F8B;&#x503C;&#x6709;&#x4E24;&#x79CD;"></a>&#x6BD4;&#x4F8B;&#x503C;&#x6709;&#x4E24;&#x79CD;</h4><ul class="ui list">
-<li>&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x4E4B;&#x95F4;&#x7684;&#x6BD4;&#x4F8B;&#x503C;&#xFF08;2&#xFF0C;0.5&#xFF09;</li>
-<li>&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x4E4B;&#x95F4;&#x6BD4;&#x4F8B;&#xFF08;2:1&#xFF09;</li>
+<h2 id="比例（Ratio）"><a href="#比例（Ratio）" class="headerlink" title="比例（Ratio）"></a>比例（Ratio）</h2><h3 id="只有一个方向的约束"><a href="#只有一个方向的约束" class="headerlink" title="只有一个方向的约束"></a>只有一个方向的约束</h3><h4 id="比例值有两种"><a href="#比例值有两种" class="headerlink" title="比例值有两种"></a>比例值有两种</h4><ul>
+<li>宽度和高度之间的比例值（2，0.5）</li>
+<li>宽度和高度之间比例（2:1）</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button</span><br><span class="line">    android:layout_width=&quot;200dp&quot;</span><br><span class="line">    android:layout_height=&quot;0dp&quot;</span><br><span class="line">    android:text=&quot;Ratio&quot;</span><br><span class="line">    app:layout_constraintBottom_toBottomOf=&quot;parent&quot;</span><br><span class="line">    app:layout_constraintDimensionRatio=&quot;2:1&quot;</span><br><span class="line">    app:layout_constraintTop_toTopOf=&quot;parent&quot;/&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x90FD;&#x88AB;&#x7EA6;&#x675F;"><a href="#&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x90FD;&#x88AB;&#x7EA6;&#x675F;" class="headerlink" title="&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x90FD;&#x88AB;&#x7EA6;&#x675F;"></a>&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x90FD;&#x88AB;&#x7EA6;&#x675F;</h3><p>layout_width&#x548C;layout_height&#x90FD;&#x4E3A;0dp<br>&#x5E0C;&#x671B;&#x4E00;&#x4E2A;&#x7EF4;&#x5EA6;&#x7EA6;&#x675F;&#x53E6;&#x4E00;&#x7ED9;&#x7EF4;&#x5EA6;&#x6DFB;&#x52A0;W&#x6216;&#x8005;H&#x8FDB;&#x884C;&#x7EA6;&#x675F;<br>&#x6B64;&#x65F6;&#x7684;&#x6BD4;&#x4F8B;&#x4E3A;&#x9AD8;&#x5EA6;:&#x5BBD;&#x5EA6;</p>
-<h2 id="&#x94FE;&#x6761;"><a href="#&#x94FE;&#x6761;" class="headerlink" title="&#x94FE;&#x6761;"></a>&#x94FE;&#x6761;</h2><h3 id="&#x521B;&#x5EFA;&#x94FE;&#x6761;"><a href="#&#x521B;&#x5EFA;&#x94FE;&#x6761;" class="headerlink" title="&#x521B;&#x5EFA;&#x94FE;&#x6761;"></a>&#x521B;&#x5EFA;&#x94FE;&#x6761;</h3><p>&#x5982;&#x679C;&#x4E00;&#x7EC4;&#x5C0F;&#x90E8;&#x4EF6;&#x901A;&#x8FC7;&#x53CC;&#x5411;&#x8FDE;&#x63A5;&#xFF0C;&#x5C06;&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x94FE;&#x6761;</p>
-<h3 id="&#x94FE;&#x6761;&#x7684;&#x6837;&#x5F0F;&#xFF08;chain-style&#xFF09;"><a href="#&#x94FE;&#x6761;&#x7684;&#x6837;&#x5F0F;&#xFF08;chain-style&#xFF09;" class="headerlink" title="&#x94FE;&#x6761;&#x7684;&#x6837;&#x5F0F;&#xFF08;chain style&#xFF09;"></a>&#x94FE;&#x6761;&#x7684;&#x6837;&#x5F0F;&#xFF08;chain style&#xFF09;</h3><ul class="ui list">
+<h3 id="宽度和高度都被约束"><a href="#宽度和高度都被约束" class="headerlink" title="宽度和高度都被约束"></a>宽度和高度都被约束</h3><p>layout_width和layout_height都为0dp<br>希望一个维度约束另一给维度添加W或者H进行约束<br>此时的比例为高度:宽度</p>
+<h2 id="链条"><a href="#链条" class="headerlink" title="链条"></a>链条</h2><h3 id="创建链条"><a href="#创建链条" class="headerlink" title="创建链条"></a>创建链条</h3><p>如果一组小部件通过双向连接，将构成一个链条</p>
+<h3 id="链条的样式（chain-style）"><a href="#链条的样式（chain-style）" class="headerlink" title="链条的样式（chain style）"></a>链条的样式（chain style）</h3><ul>
 <li>spread chain</li>
 <li>spread inside chain</li>
 <li>weighted chain</li>
 <li>packed chain</li>
 <li>packed chain with bias</li>
 </ul>
-<h2 id="guideline"><a href="#guideline" class="headerlink" title="guideline"></a>guideline</h2><p>guideline&#x53EA;&#x80FD;&#x7528;&#x4E8E;constraintlayout&#x4E2D;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x663E;&#x793A;&#xFF0C;&#x4EC5;&#x4EC5;&#x7528;&#x4E8E;&#x8F85;&#x52A9;&#x5E03;&#x5C40;</p>
-<ul class="ui list">
-<li>vertical&#x7684;guideline&#xFF0C;&#x5BBD;&#x5EA6;&#x4E3A;0&#xFF0C;&#x9AD8;&#x5EA6;&#x4E3A;constraintlayout&#x7684;&#x9AD8;&#x5EA6;</li>
-<li>horizontal&#x7684;guideline&#xFF0C;&#x9AD8;&#x5EA6;&#x4E3A;0&#xFF0C;&#x5BBD;&#x5EA6;&#x4E3A;constraintlayout&#x7684;&#x5BBD;&#x5EA6;</li>
+<h2 id="guideline"><a href="#guideline" class="headerlink" title="guideline"></a>guideline</h2><p>guideline只能用于constraintlayout中，不会被显示，仅仅用于辅助布局</p>
+<ul>
+<li>vertical的guideline，宽度为0，高度为constraintlayout的高度</li>
+<li>horizontal的guideline，高度为0，宽度为constraintlayout的宽度</li>
 </ul>
-<p>&#x5B9A;&#x4F4D;guideline&#x7684;&#x4E09;&#x79CD;&#x6837;&#x5F0F;</p>
-<ul class="ui list">
-<li>&#x6307;&#x5B9A;&#x5DE6;&#x4FA7;&#x6216;&#x8005;&#x9876;&#x90E8;&#x7684;&#x56FA;&#x5B9A;&#x8DDD;&#x79BB;&#xFF08;layout_constraintGuide_begin&#xFF09;</li>
-<li>&#x6307;&#x5B9A;&#x53F3;&#x4FA7;&#x6216;&#x8005;&#x5E95;&#x90E8;&#x7684;&#x56FA;&#x5B9A;&#x8DDD;&#x79BB;&#xFF08;layout_constraintGuide_end&#xFF09;</li>
-<li>&#x6307;&#x5B9A;&#x5728;&#x7236;&#x63A7;&#x4EF6;&#x4E2D;&#x7684;&#x5BBD;&#x5EA6;&#x6216;&#x9AD8;&#x5EA6;&#x7684;&#x767E;&#x5206;&#x6BD4;&#xFF08;layout_constraintGuide_percent&#xFF09;</li>
+<p>定位guideline的三种样式</p>
+<ul>
+<li>指定左侧或者顶部的固定距离（layout_constraintGuide_begin）</li>
+<li>指定右侧或者底部的固定距离（layout_constraintGuide_end）</li>
+<li>指定在父控件中的宽度或高度的百分比（layout_constraintGuide_percent）</li>
 <li></li>
 </ul>
 
-                        
-                    </div>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://yoursite.com/2018/07/24/ConstraintLayout/" data-id="cjl2yoczi0000n890y5qykdbr" class="article-share-link">Share</a>
+      
 
-                    
-                    
-                    
-
-                    <div class="description post-description">
-    <span class="post-description-item">
-        <time datetime="2018-07-23T23:06:19.000Z" itemprop="datePublished">2018-07-24</time>
-
-    </span>
-    <span class="post-description-item">
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/21/rxjava/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-    </span>
-</div>
+          RxJava简介
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
-                </div>
-                
-                <div id="pagination" class="nav-web ui text container pagination">
+  
+</article>
 
-    <div class="ui stackable two column divided grid container">
-        <div class="row">
-            <div class="column nav-left">
-                
-
-                <a href="/2018/08/20/hello-world/" class="ui tiny button">
-
-                    <i class="angle left icon"></i>
-                    
-                    Hello World
-                    
-
-                </a>
-
-                
-            </div>
-            <div class="column nav-right">
-                
-
-                <a class="ui tiny button disabled">Next<i class="angle right icon"></i></a>
-
-                
-            </div>
-        </div>
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 刘梦雨<br>
+      Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
-
-</div>
-                
-            </div>
-
-            
-            <div class="three wide computer three wide tablet column">
-
-                <div class="ui sticky article-toc" id="article-toc">
-                    <!-- toc -->
-                    <ol class="ui ordered list"><li><a href="#ConstraintLayout"><span>ConstraintLayout</span></a><ol><li><a href="#三种约束"><span>三种约束</span></a></li><li><a href="#相对定位（Relative-positioning）"><span>相对定位（Relative positioning）</span></a></li><li><a href="#当约束控件为GONE时的margins"><span>当约束控件为GONE时的margins</span></a></li><li><a href="#居中定位"><span>居中定位</span></a></li><li><a href="#倾向（bias）"><span>倾向（bias）</span></a></li><li><a href="#尺寸约束（dimensions-constrains）"><span>尺寸约束（dimensions constrains）</span></a></li><li><a href="#控件的尺寸约束（widgets-dimensions-constrains）"><span>控件的尺寸约束（widgets dimensions constrains）</span></a></li><li><a href="#比例（Ratio）"><span>比例（Ratio）</span></a><ol><li><a href="#只有一个方向的约束"><span>只有一个方向的约束</span></a><ol><li><a href="#比例值有两种"><span>比例值有两种</span></a></li></ol></li><li><a href="#宽度和高度都被约束"><span>宽度和高度都被约束</span></a></li></ol></li><li><a href="#链条"><span>链条</span></a><ol><li><a href="#创建链条"><span>创建链条</span></a></li><li><a href="#链条的样式（chain-style）"><span>链条的样式（chain style）</span></a></li></ol></li><li><a href="#guideline"><span>guideline</span></a></li></ol></li></ol>
-                </div>
-
-            </div>
-            
-
-        </div>
+  </div>
+</footer>
     </div>
-</div>
+    <!--
+      <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories/life" class="mobile-nav-link">生活</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+</nav>
+    -->
+    
 
+<!-- 百度分享 start -->
 
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        </div>
-        <div class="ui vertical footer segment">
-    <div class="ui center aligned container">
-        <div class="ui inverted section divider"></div>
-        &copy; 2018 <a href="/">John Doe</a>,
-        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
-                href="http://hexo.io/" target="_blank">Hexo</a>.
-    </div>
-</div>
+<!-- 百度分享 end -->
 
-    </div>
-
-
-
-
-<!-- scripts list from theme config.yml -->
-
-<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-
-<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
-
-<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
-
-<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
-
-<script src="/js/semantic-ui-algolia.js"></script>
-
-<script src="/js/aloha-events.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 
 
 
+<script src="/js/jquery.scrollUp.min.js"></script>
+<script src="/js/jquery.transform.js"></script>
+<script src="/js/menu.js"></script>
+
+<script src="/js/script.js"></script>
+<script src="/js/scrollUp.js"></script>
+
+  </div>
 </body>
 </html>
