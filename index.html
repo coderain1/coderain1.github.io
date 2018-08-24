@@ -273,135 +273,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2018/08/21/Android性能优化/" data-id="cjl67kag90000q0902qzgayqv" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-kotlin基础知识" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/08/21/kotlin基础知识/">kotlin 基础知识</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/08/21/kotlin基础知识/">
-            <time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h1 id="kotlin-基础知识"><a href="#kotlin-基础知识" class="headerlink" title="kotlin 基础知识"></a>kotlin 基础知识</h1><p>1，object 相当于Java的单例对象<br>2，伴生对象（companion object）静态成员<br>3，方法重载与默认参数<br>4，扩展方法与扩展属性<br>5，属性代理（lazy）<br>6，数据类（data）<br>7,内部类（this@outer）<br>静态内部类，非静态内部类（持有外部类的一个状态）<br>8,可见性修饰符：<br>public private，protected，internal<br>9，枚举</p>
-<h2 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h2><h3 id="中缀表达式"><a href="#中缀表达式" class="headerlink" title="中缀表达式"></a>中缀表达式</h3><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>用“”引起来<br>用 == 来比较两个字符串的值是否一样<br>用 === 来比较两个字符串的内存地址是否相同</p>
-<h3 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h3><p>$ 变量   取变量的值<br>“”“   ”“”  三个引号里面的所有都是原始字符串</p>
-<h2 id="lambda表达式（匿名函数）"><a href="#lambda表达式（匿名函数）" class="headerlink" title="lambda表达式（匿名函数）"></a>lambda表达式（匿名函数）</h2><blockquote>
-<p>lambda表达式的返回值为函数体的最后一行</p>
-</blockquote>
-<p> var 用lateinit 延迟初始化  val用lazy</p>
-<p> 类的构造函数中参数如果没用var 或者val修饰，那么就不是类的成员</p>
-<p> 运算符</p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2018/08/21/kotlin基础知识/" data-id="cjl67kagd0001q090z1k25j8n" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/08/21/Android性能优化/" data-id="cjl7dpnnd0000ef90negctizo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -538,7 +410,268 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2018/08/21/java反射/" data-id="cjl67kagg0002q09020oc4bm4" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/08/21/java反射/" data-id="cjl7dpnnh0001ef90jy401dyl" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-框架" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/08/21/框架/">MVC,MVP架构简介</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/08/21/框架/">
+            <time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><p>M:对应数据层，主要用来做一些网络请求，查询数据库获取需要展示的数据的工作<br>V：view层，主要是把M层获取的数据展示出来的<br>C:controller层，主要处理业务逻辑</p>
+<h3 id="view层直接和model层进行交互"><a href="#view层直接和model层进行交互" class="headerlink" title="view层直接和model层进行交互"></a>view层直接和model层进行交互</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//mvc方式view层直接和model进行交互</span><br><span class="line">btn2.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View view) &#123;</span><br><span class="line">        new HttpModel(textView).request();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="model层的代码"><a href="#model层的代码" class="headerlink" title="model层的代码"></a>model层的代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">public class HttpModel &#123;</span><br><span class="line"></span><br><span class="line">    private TextView textView;</span><br><span class="line"></span><br><span class="line">    public HttpModel(TextView textView)&#123;</span><br><span class="line">        this.textView = textView;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Handler handler = new Handler() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void handleMessage(Message msg) &#123;</span><br><span class="line">            super.handleMessage(msg);</span><br><span class="line">            textView.setText((String)msg.obj);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    public void request()&#123;</span><br><span class="line">        new Thread(new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                try &#123;</span><br><span class="line">                    Thread.sleep(2000);</span><br><span class="line">                    Message msg = handler.obtainMessage();</span><br><span class="line">                    msg.obj = &quot;网络请求的数据&quot;;</span><br><span class="line">                    handler.sendMessage(msg);</span><br><span class="line">                &#125; catch (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!-- -->
+<blockquote>
+<p>上面的代码可以看出activity同时充当了view和controller层，既有view层的处理也有controller层业务逻辑的处理，如果页面的业务逻辑很多的话，那么activity就会变得很臃肿</p>
+</blockquote>
+<h2 id="对MVC的改进，MVP模式的简介"><a href="#对MVC的改进，MVP模式的简介" class="headerlink" title="对MVC的改进，MVP模式的简介"></a>对MVC的改进，MVP模式的简介</h2><p>M: model层同样是处理业务逻辑的<br>V: view层也是展示获得的数据<br>P: Presenter层作为M层和V层交互的桥梁</p>
+<blockquote>
+<p>V层会向P层发出获取数据的请求，P层再去调用M层获取数据的方法，当M层获取数据后会调用P层的方法，在P层再调用V层的更新view的方法；这里P层是M层和V层交互的桥梁</p>
+</blockquote>
+<h4 id="M层的代码"><a href="#M层的代码" class="headerlink" title="M层的代码"></a>M层的代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">class MvpHttpModel &#123;</span><br><span class="line"></span><br><span class="line">    private CallBack callback;</span><br><span class="line">    public MvpHttpModel(CallBack callback)&#123;</span><br><span class="line">        this.callback = callback;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Handler handler = new Handler()&#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void handleMessage(Message msg) &#123;</span><br><span class="line">            super.handleMessage(msg);</span><br><span class="line">            callback.onResult((String) msg.obj);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    public void request()&#123;</span><br><span class="line">        new Thread(new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                try &#123;</span><br><span class="line">                    Thread.sleep(2000);</span><br><span class="line">                    Message msg = handler.obtainMessage();</span><br><span class="line">                    msg.obj = &quot;MVP从网络获取的数据&quot;;</span><br><span class="line">                    handler.sendMessage(msg);</span><br><span class="line">                &#125; catch (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface CallBack&#123;</span><br><span class="line">    void onResult(String content);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="V层的代码"><a href="#V层的代码" class="headerlink" title="V层的代码"></a>V层的代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">btn1.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View view) &#123;</span><br><span class="line">        presenter.request();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="presenter层（view和Model交互的桥梁）"><a href="#presenter层（view和Model交互的桥梁）" class="headerlink" title="presenter层（view和Model交互的桥梁）"></a>presenter层（view和Model交互的桥梁）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public class Presenter &#123;</span><br><span class="line"></span><br><span class="line">    private MvpView mvpView;</span><br><span class="line">    private MvpHttpModel mvpHttpModel;</span><br><span class="line">    public Presenter(final MvpView mvpView)&#123;</span><br><span class="line">        this.mvpView = mvpView;</span><br><span class="line">        mvpHttpModel = new MvpHttpModel(new CallBack() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onResult(String content) &#123;</span><br><span class="line">                mvpView.updateTv(content);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void request()&#123;</span><br><span class="line">     	mvpHttpModel.request();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void detchView()&#123;</span><br><span class="line">        mvpView = null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public interface MvpView &#123;</span><br><span class="line">    void updateTv(String content);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h2>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2018/08/21/框架/" data-id="cjl7dpnnl0003ef90qgldnb5c" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-kotlin基础知识" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/08/21/kotlin基础知识/">kotlin 基础知识</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/08/21/kotlin基础知识/">
+            <time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="kotlin-基础知识"><a href="#kotlin-基础知识" class="headerlink" title="kotlin 基础知识"></a>kotlin 基础知识</h1><p>1，object 相当于Java的单例对象<br>2，伴生对象（companion object）静态成员<br>3，方法重载与默认参数<br>4，扩展方法与扩展属性<br>5，属性代理（lazy）<br>6，数据类（data）<br>7,内部类（this@outer）<br>静态内部类，非静态内部类（持有外部类的一个状态）<br>8,可见性修饰符：<br>public private，protected，internal<br>9，枚举</p>
+<h2 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h2><h3 id="中缀表达式"><a href="#中缀表达式" class="headerlink" title="中缀表达式"></a>中缀表达式</h3><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>用“”引起来<br>用 == 来比较两个字符串的值是否一样<br>用 === 来比较两个字符串的内存地址是否相同</p>
+<h3 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h3><p>$ 变量   取变量的值<br>“”“   ”“”  三个引号里面的所有都是原始字符串</p>
+<h2 id="lambda表达式（匿名函数）"><a href="#lambda表达式（匿名函数）" class="headerlink" title="lambda表达式（匿名函数）"></a>lambda表达式（匿名函数）</h2><blockquote>
+<p>lambda表达式的返回值为函数体的最后一行</p>
+</blockquote>
+<p> var 用lateinit 延迟初始化  val用lazy</p>
+<p> 类的构造函数中参数如果没用var 或者val修饰，那么就不是类的成员</p>
+<p> 运算符</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2018/08/21/kotlin基础知识/" data-id="cjl7dpnnm0004ef90crgcbrhp" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -686,140 +819,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2018/08/21/rxjava/" data-id="cjl67kagh0003q090tve6hbxf" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-框架" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/08/21/框架/">MVC,MVP架构简介</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/08/21/框架/">
-            <time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><p>M:对应数据层，主要用来做一些网络请求，查询数据库获取需要展示的数据的工作<br>V：view层，主要是把M层获取的数据展示出来的<br>C:controller层，主要处理业务逻辑</p>
-<h3 id="view层直接和model层进行交互"><a href="#view层直接和model层进行交互" class="headerlink" title="view层直接和model层进行交互"></a>view层直接和model层进行交互</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//mvc方式view层直接和model进行交互</span><br><span class="line">btn2.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View view) &#123;</span><br><span class="line">        new HttpModel(textView).request();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="model层的代码"><a href="#model层的代码" class="headerlink" title="model层的代码"></a>model层的代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">public class HttpModel &#123;</span><br><span class="line"></span><br><span class="line">    private TextView textView;</span><br><span class="line"></span><br><span class="line">    public HttpModel(TextView textView)&#123;</span><br><span class="line">        this.textView = textView;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Handler handler = new Handler() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void handleMessage(Message msg) &#123;</span><br><span class="line">            super.handleMessage(msg);</span><br><span class="line">            textView.setText((String)msg.obj);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    public void request()&#123;</span><br><span class="line">        new Thread(new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                try &#123;</span><br><span class="line">                    Thread.sleep(2000);</span><br><span class="line">                    Message msg = handler.obtainMessage();</span><br><span class="line">                    msg.obj = &quot;网络请求的数据&quot;;</span><br><span class="line">                    handler.sendMessage(msg);</span><br><span class="line">                &#125; catch (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<!-- -->
-<blockquote>
-<p>上面的代码可以看出activity同时充当了view和controller层，既有view层的处理也有controller层业务逻辑的处理，如果页面的业务逻辑很多的话，那么activity就会变得很臃肿</p>
-</blockquote>
-<h2 id="对MVC的改进，MVP模式的简介"><a href="#对MVC的改进，MVP模式的简介" class="headerlink" title="对MVC的改进，MVP模式的简介"></a>对MVC的改进，MVP模式的简介</h2><p>M: model层同样是处理业务逻辑的<br>V: view层也是展示获得的数据<br>P: Presenter层作为M层和V层交互的桥梁</p>
-<blockquote>
-<p>V层会向P层发出获取数据的请求，P层再去调用M层获取数据的方法，当M层获取数据后会调用P层的方法，在P层再调用V层的更新view的方法；这里P层是M层和V层交互的桥梁</p>
-</blockquote>
-<h4 id="M层的代码"><a href="#M层的代码" class="headerlink" title="M层的代码"></a>M层的代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">class MvpHttpModel &#123;</span><br><span class="line"></span><br><span class="line">    private CallBack callback;</span><br><span class="line">    public MvpHttpModel(CallBack callback)&#123;</span><br><span class="line">        this.callback = callback;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private Handler handler = new Handler()&#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void handleMessage(Message msg) &#123;</span><br><span class="line">            super.handleMessage(msg);</span><br><span class="line">            callback.onResult((String) msg.obj);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    public void request()&#123;</span><br><span class="line">        new Thread(new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                try &#123;</span><br><span class="line">                    Thread.sleep(2000);</span><br><span class="line">                    Message msg = handler.obtainMessage();</span><br><span class="line">                    msg.obj = &quot;MVP从网络获取的数据&quot;;</span><br><span class="line">                    handler.sendMessage(msg);</span><br><span class="line">                &#125; catch (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface CallBack&#123;</span><br><span class="line">    void onResult(String content);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="V层的代码"><a href="#V层的代码" class="headerlink" title="V层的代码"></a>V层的代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">btn1.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View view) &#123;</span><br><span class="line">        presenter.request();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="presenter层（view和Model交互的桥梁）"><a href="#presenter层（view和Model交互的桥梁）" class="headerlink" title="presenter层（view和Model交互的桥梁）"></a>presenter层（view和Model交互的桥梁）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public class Presenter &#123;</span><br><span class="line"></span><br><span class="line">    private MvpView mvpView;</span><br><span class="line">    private MvpHttpModel mvpHttpModel;</span><br><span class="line">    public Presenter(final MvpView mvpView)&#123;</span><br><span class="line">        this.mvpView = mvpView;</span><br><span class="line">        mvpHttpModel = new MvpHttpModel(new CallBack() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onResult(String content) &#123;</span><br><span class="line">                mvpView.updateTv(content);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void request()&#123;</span><br><span class="line">     	mvpHttpModel.request();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void detchView()&#123;</span><br><span class="line">        mvpView = null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public interface MvpView &#123;</span><br><span class="line">    void updateTv(String content);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="MVVM模式"><a href="#MVVM模式" class="headerlink" title="MVVM模式"></a>MVVM模式</h2>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2018/08/21/框架/" data-id="cjl67kagi0004q090rl5y58ma" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/08/21/rxjava/" data-id="cjl7dpnnn0005ef90wrdneoxq" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -995,7 +995,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2018/07/24/ConstraintLayout/" data-id="cjl67kagj0005q0905mac28h2" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2018/07/24/ConstraintLayout/" data-id="cjl7dpnnk0002ef90p5yy6apg" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1103,25 +1103,6 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/08/21/kotlin基础知识/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/08/21/kotlin基础知识/" class="title">kotlin 基础知识</a></p>
-                            <p class="item-date"><time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2018/08/21/java反射/" class="thumbnail">
     
     
@@ -1141,25 +1122,6 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/08/21/rxjava/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/08/21/rxjava/" class="title">RxJava简介</a></p>
-                            <p class="item-date"><time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2018/08/21/框架/" class="thumbnail">
     
     
@@ -1172,6 +1134,44 @@
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2018/08/21/框架/" class="title">MVC,MVP架构简介</a></p>
+                            <p class="item-date"><time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/08/21/kotlin基础知识/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/08/21/kotlin基础知识/" class="title">kotlin 基础知识</a></p>
+                            <p class="item-date"><time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/08/21/rxjava/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/08/21/rxjava/" class="title">RxJava简介</a></p>
                             <p class="item-date"><time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time></p>
                         </div>
                     </li>
